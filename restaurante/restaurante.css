@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #17201c;
+    background-image:
+        linear-gradient(115deg, rgba(13, 22, 19, 0.88), rgba(13, 22, 19, 0.48)),
+        var(--restaurant-background, none);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.menu{
+    border-bottom: 4px solid #0fdab5;
+    padding: 20px;
+    background-color: rgba(20, 29, 25, 0.84);
+    backdrop-filter: blur(8px);
+}
+
+.titulo{
+    position: relative;
+    color: #fff;
+}
+
+.titulo p{
+    display: inline-block;
+    color: #0fdab5;
+}
+
+
+.contenedor{
+    background-color: rgba(24, 34, 29, 0.78);
+    width: 90%;
+    border-radius: 10px;
+    margin: 70px;
+    padding: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.contenedor h1{
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+}
+
