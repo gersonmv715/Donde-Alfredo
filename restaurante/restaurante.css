@@ -17,6 +17,9 @@ body{
 }
 
 .menu{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     border-bottom: 4px solid #0fdab5;
     padding: 20px;
     background-color: rgba(20, 29, 25, 0.84);
