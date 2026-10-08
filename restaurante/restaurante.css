@@ -35,18 +35,114 @@ body{
 
 
 .contenedor{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
     background-color: rgba(24, 34, 29, 0.78);
-    width: 90%;
-    border-radius: 10px;
-    margin: 70px;
-    padding: 90px;
+    width: min(1100px, calc(100% - 40px));
+    border-radius: 18px;
+    margin: 48px auto;
+    padding: clamp(22px, 4vw, 48px);
     border: 1px solid rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(8px);
 }
 
 .contenedor h1{
+    grid-column: 1 / -1;
     color: #fff;
     text-align: center;
-    font-size: 35px;
+    font-size: clamp(28px, 4vw, 38px);
+    margin-bottom: 8px;
 }
 
+.contenedor > br{
+    display: none;
+}
+
+.mesa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 176px;
+    padding: 20px 14px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 600;
+    background-color:white;
+    border: 1px solid rgba(15, 218, 181, 0.28);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.mesa img{
+    width: 112px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.indicador {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+}
+
+
+.indicador.disponible {
+    background-color: #00c853;
+    box-shadow: 0 0 12px #00c853;
+}
+
+
+.indicador.pendiente {
+    background-color: #ffc107;
+    box-shadow: 0 0 12px #ffc107;
+}
+
+
+.indicador.ocupada {
+    background-color: #f44336;
+    box-shadow: 0 0 12px #f44336;
+}
+
+.estado {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mesa {
+    cursor: pointer;
+}
+
+.mesa:hover{
+    transform: translateY(-4px);
+    border-color: #0fdab5;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px){
+    .contenedor{
+        width: calc(100% - 24px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        margin: 24px auto;
+        padding: 18px 14px;
+    }
+
+    .mesa{
+        min-height: 150px;
+        padding: 14px 8px;
+        font-size: 16px;
+    }
+
+    .mesa img{
+        width: 90px;
+        height: 80px;
+    }
+}
