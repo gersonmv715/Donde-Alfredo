@@ -17,13 +17,31 @@ body{
 }
 
 .menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 4px solid #0fdab5;
+    border-bottom: 4px solid #A29F15;
     padding: 20px;
     background-color: rgba(20, 29, 25, 0.84);
     backdrop-filter: blur(8px);
+}
+
+.menu a{
+    
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 24px;
+    transition: color 180ms ease;
+}
+
+.menu a:hover{
+    color: #A29F15;
+
 }
 
 .titulo{
@@ -33,7 +51,7 @@ body{
 
 .titulo p{
     display: inline-block;
-    color: #0fdab5;
+    color: #A29F15;
 }
 
 
@@ -60,6 +78,10 @@ body{
 
 .contenedor > br{
     display: none;
+}
+
+.contenedor a{
+    text-decoration: none;
 }
 
 .mesa{
